@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+
+h1 { 
+    margin-left: 43%;
+    margin-top: 3%;
+}
+.table-container { 
+    display: flex;
+    margin-top: 1%;
+    justify-content: center;
+}
+th {
+    font-size: 18px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 7px;
+
+}
+
+tr {
+    background: linear-gradient(rgba(235, 235, 235, 0.534), #fff);
+}
+
+td {
+    border: 1px solid rgba(129, 129, 129, 0.116);
+    border-radius: 7px;
+    text-align: center;
+}
+
+.books-actions {
+    margin-right: 100px;
+    
+}
+.table-container i { 
+    margin: 0 12px;
+    color: lightgray;
+}
+
+.btn {
+    margin: 5px;
+    background: #3D94F6;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-family: Open Sans;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 10px;
+    border: solid #337FED 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+.btn:hover {
+    background: #1E62D0;
+    border: solid #337FED 1px;
+    text-decoration: none;
+}
+
+.btn-update { 
+    background: #38c225;
+    border: solid #38c225 1px;
+}
+.btn-update:hover {
+    background: #2ba51b;
+    border: solid #38c225 1px;
+    text-decoration: none;
+}
+
+.btn-delete { 
+    background: #c22525;
+    border: solid #c22525 1px;
+}
+
+.btn-delete:hover {
+    background: #a11a1a;
+    border: solid #c22525 1px;
+    text-decoration: none;
+}
+
+.btn-add { 
+    margin-left: 35%;
+}
+
+.book-modal { 
+background-color: lightgray;
+width: 25%;
+border-radius: 25px;
+box-shadow: 5px 5px 5px rgba(211, 211, 211, 0.349) ;
+position: absolute;
+top: 75px;
+right: 75px;
+height: 500px
+}
+.book-modal:hover { 
+    box-shadow: 5px 5px 5px lightgray ;
+    background: linear-gradient(lightgray, rgb(233, 233, 233));
+}
+.modal-content { 
+    padding: 25px;
+}
+
+.book-img { 
+    width: 60px;
+    height: 80px;
+    float: right
+}
+.exit { 
+    color: transparent;
+    transition: all .5s;
+}
+.exit:hover { 
+    color: black;
+}
