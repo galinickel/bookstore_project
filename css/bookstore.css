@@ -1,118 +1,99 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
-
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  max-width: 100%;
 }
 
-
-h1 { 
-    margin-left: 43%;
-    margin-top: 3%;
+h1 {
+  margin-top: 1%;
+  margin-left: 55vh;
 }
-.table-container { 
-    display: flex;
-    margin-top: 1%;
-    justify-content: center;
+.table-container {
+  display: flex;
+  margin-top: 1%;
+  justify-content: center;
+}
+table {
+  table-layout: fixed;
 }
 th {
-    font-size: 18px;
-    background-color: rgb(241, 241, 241);
-    border-radius: 7px;
-
+  font-size: 18px;
+  background-color: rgb(241, 241, 241);
+  border-radius: 7px;
 }
 
 tr {
-    background: linear-gradient(rgba(235, 235, 235, 0.534), #fff);
+  background: linear-gradient(rgba(235, 235, 235, 0.534), #fff);
+  padding: 5px;
 }
 
 td {
-    border: 1px solid rgba(129, 129, 129, 0.116);
-    border-radius: 7px;
-    text-align: center;
+  border: 1px solid rgba(129, 129, 129, 0.116);
+  border-radius: 7px;
+  text-align: center;
 }
-
+.td-title {
+  width: 180px;
+}
 .books-actions {
-    margin-right: 100px;
-    
+  margin-right: 100px;
 }
-.table-container i { 
-    margin: 0 12px;
-    color: lightgray;
-}
-
-.btn {
-    margin: 5px;
-    background: #3D94F6;
-    border-radius: 10px;
-    color: #FFFFFF;
-    font-family: Open Sans;
-    font-size: 14px;
-    font-weight: 100;
-    padding: 10px;
-    border: solid #337FED 1px;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
-}
-.btn:hover {
-    background: #1E62D0;
-    border: solid #337FED 1px;
-    text-decoration: none;
+.table-container i {
+  margin: 0 12px;
+  color: lightgray;
 }
 
-.btn-update { 
-    background: #38c225;
-    border: solid #38c225 1px;
+.left { 
+  float: left;
 }
-.btn-update:hover {
-    background: #2ba51b;
-    border: solid #38c225 1px;
-    text-decoration: none;
+.right { 
+  float:right;
 }
-
-.btn-delete { 
-    background: #c22525;
-    border: solid #c22525 1px;
+.hidden {
+  opacity: 0;
+  right: 0;
 }
 
-.btn-delete:hover {
-    background: #a11a1a;
-    border: solid #c22525 1px;
-    text-decoration: none;
+.update-modal {
+  transition: all 0.5s;
+  border-radius: 10px;
+  background: linear-gradient(rgb(235, 235, 235), #fff);
+  height: 100px;
+  width: 225px;
+  z-index: 5;
+  position: absolute;
+  margin-bottom: 25px;
+  border: 2px lightgray solid;
 }
 
-.btn-add { 
-    margin-left: 35%;
+.update-modal-exit { 
+  color: lightgray;
+  cursor: pointer;
+
 }
 
-.book-modal { 
-background-color: lightgray;
-width: 25%;
-border-radius: 25px;
-box-shadow: 5px 5px 5px rgba(211, 211, 211, 0.349) ;
-position: absolute;
-top: 75px;
-right: 75px;
-height: 500px
-}
-.book-modal:hover { 
-    box-shadow: 5px 5px 5px lightgray ;
-    background: linear-gradient(lightgray, rgb(233, 233, 233));
-}
-.modal-content { 
-    padding: 25px;
-}
+.btn-update-modal { 
+  height: 25px;
+  font-size: 14px;
+color: white;
+border-radius: 10px;}
+.nav-btns {
+  margin: auto;
+  width: 45%;
+  height: 40px;
 
-.book-img { 
-    width: 60px;
-    height: 80px;
-    float: right
 }
-.exit { 
-    color: transparent;
-    transition: all .5s;
+.navigation-btns {
+  width: 120px;
+  height: 35px;
+  cursor: pointer;
+
 }
-.exit:hover { 
-    color: black;
+.nav-num { 
+  font-size: 12px;
+  height: 15px;
+  width: 25px;
+  background-color: rgb(241, 241, 241);
+  border-radius: 7px;
+  cursor: pointer;
 }

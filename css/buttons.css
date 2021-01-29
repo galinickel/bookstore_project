@@ -1,0 +1,46 @@
+.btn {
+    margin: 5px;
+    background: #3d94f6;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: Open Sans;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 10px;
+    border: solid #337fed 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    
+
+  }
+ 
+  .btn:hover {
+    background: #1e62d0;
+    border: solid #337fed 1px;
+    text-decoration: none;
+  }
+  
+  .btn-update {
+    background: #38c225;
+    border: solid #38c225 1px;
+  }
+  .btn-update:hover {
+    background: #2ba51b;
+    border: solid #38c225 1px;
+    text-decoration: none;
+  }
+  
+  .btn-delete {
+    background: #c22525;
+    border: solid #c22525 1px;
+  }
+  
+  .btn-delete:hover {
+    background: #a11a1a;
+    border: solid #c22525 1px;
+    text-decoration: none;
+  }
+  

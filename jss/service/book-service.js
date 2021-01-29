@@ -58,6 +58,20 @@ function updateBook(bookId, newPrice) {
     _saveBooksToStorage();
 }
 
+function updateBookRating(bookId, val) {
+    var book = getBookById(bookId)
+    if (val.toLowerCase() === 'minus') {
+        if (book.rating === 0) return
+        book.rating--
+    }
+    if (val.toLowerCase() === 'plus') {
+        if (book.rating === 10) return
+        book.rating++
+    }
+    _saveBooksToStorage();
+
+}
+
 function getVendors() {
     return gVendors;
 }
@@ -70,7 +84,8 @@ function _createBook(title, price) {
         title: capFirst(title),
         price: +(price),
         desc: makeLorem(),
-        imgUrl: `img/${gImgs[[getRandomIntInclusive(1,gImgs.length-1)]]}.jpg`
+        imgUrl: `img/${gImgs[[getRandomIntInclusive(1, gImgs.length - 1)]]}.jpg`,
+        rating: 0
     }
 }
 
@@ -78,7 +93,7 @@ function _createBooks() {
     var books = loadFromStorage(KEY)
     if (!books || !books.length) {
         books = []
-        for (let i = 0; i < 25; i++) {
+        for (let i = 0; i < 55; i++) {
             books.push(_createBook(generateName(), gPrices[getRandomIntInclusive(1, gPrices.length - 1)]))
         }
     }
@@ -96,7 +111,7 @@ function _saveBooksToStorage() {
 
 function getSortedBooksForDisplay() {
     var books = getBooks()
-        if (gSortBy === 'price') {
+    if (gSortBy === 'price') {
         books = books.sort((a, b) => {
             return a.price - b.price
         })
@@ -105,7 +120,7 @@ function getSortedBooksForDisplay() {
         books = books.sort((a, b) => {
             return a.id - b.id
         })
-        
+
     }
     if (gSortBy === 'title') {
         var books = books.sort((a, b) => {

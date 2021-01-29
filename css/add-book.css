@@ -1,0 +1,33 @@
+.add-container {
+    margin-left: 10vh;
+    top: 3vh;
+    position: absolute;
+    height: 300px;
+  }
+  .add-modal-form {
+      transition: all .5s;
+      border-radius: 10px;
+      background: linear-gradient(rgb(235, 235, 235), #fff);
+
+      border: 2px lightgray solid;
+    
+    height: 100px;
+    width: 175px;
+  
+  }
+  input { 
+      margin: 10px;
+      width: 75%;
+      border: none;
+      border-radius: 5px;
+  }
+  
+  .add-book-button { 
+      display: block;
+      margin-left: 10px;
+      border: none;
+      border-radius: 5px;
+      background: linear-gradient(#337fed, #1e62d0);
+      color: white;
+
+  }

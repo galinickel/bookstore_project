@@ -1,51 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bookstore.css" />
+    <link rel="stylesheet" href="css/book-desc.css" />
+    <link rel="stylesheet" href="css/add-book.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,500;1,700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/bookstore.css">
+
     <title>Gali's Bookstore</title>
-</head>
+  </head>
 
-<body >
+  <body>
     <h1><i>Gali's Bookstore</i></h1>
-    <span class="btn btn-add" onclick="onAddBook()">Add Book</span>
+    <div class="add-container">
+      <div class="add-modal-form hidden">
+        <form onsubmit="onAddBook(event)">
+          <input
+            type="text"
+            name="title"
+            placeholder="New Book Name"
+          />
+          <input
+            type="text"
+            name="price"
+            placeholder="New Book Price"
+          />
+          <button class="add-book-button">Save Book</button>
+        </form>
+      </div>
+      <span class="btn btn-add" onclick="onCallAddBook()">Add Book</span>
+    </div>
     <div class="table-container">
-        <table class="table" cellpadding="9">
-            <thead>
-                <tr>
-                    <th onclick="onSetSort('id')"><i class="fas fa-sort"></i>Book ID</th>
-                    <th onclick="onSetSort('title')"><i class="fas fa-sort"></i>Title</th>
-                    <th onclick="onSetSort('price')"><i class="fas fa-sort"></i>Price</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody class="table-books">
-            </tbody>
-        </table>
+      <table class="table" cellpadding="5" style="table-layout:fixed">
+        <thead>
+          <tr>
+            <th onclick="onSetSort('id')">
+              <i class="fas fa-sort"></i>Book ID
+            </th>
+            <th onclick="onSetSort('title')">
+              <i class="fas fa-sort"></i>Title
+            </th>
+            <th onclick="onSetSort('price')">
+              <i class="fas fa-sort"></i>Price
+            </th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="table-books"></tbody>
         
-    </div>
-    <button onclick="onPrevPage()">Previous Page</button>
-    <button onclick="onNextPage()">Next Page</button>
-    <div class="book-modal" hidden>
+
+        
+    </table>
+</div>
+<table class="nav-btns">
+
+</div>
+
+    <div class="modal-container">
+      <div class="book-modal hidden">
         <div class="modal-content">
-            <span class="img"></span>
-            <h5>Book Title</h5>
-            <h6>Book Price</h6>
-            <p></p>
-            <span  onclick="onCloseModal()">x <span class="exit">Click me to exit</span></span>
+          <span class="img"></span>
+          <h5>Book Title</h5>
+          <h6>Book Price</h6>
+          <p></p>  
+          <div class="rate-book-sect">    
+          </div>
+          <h5>Rate this book?</h5>
+          <p class ="close-modal" onclick="onCloseModal()"
+            >x <span class="exit">Click me to exit</span></p
+          >
         </div>
+      </div>
     </div>
+
     <script src="jss/service/util-service.js"></script>
     <script src="jss/service/storage-service.js"></script>
     <script src="jss/service/book-service.js"></script>
     <script src="jss/book-controller.js"></script>
-</body>
-
+  </body>
 </html>
